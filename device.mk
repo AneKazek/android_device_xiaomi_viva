@@ -239,14 +239,7 @@ PRODUCT_PACKAGES += \
 
 # Gnss
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0.vendor:64 \
-    android.hardware.gnss@1.1.vendor:64 \
-    android.hardware.gnss@2.0.vendor:64 \
-    android.hardware.gnss@2.1.vendor:64 \
-    android.hardware.gnss.measurement_corrections@1.0.vendor:64 \
-    android.hardware.gnss.measurement_corrections@1.1.vendor:64 \
-    android.hardware.gnss.visibility_control@1.0.vendor:64 \
-    android.hardware.gnss-V1-ndk.vendor:64
+    android.hardware.gnss-service.mediatek
 
 # Health
 PRODUCT_PACKAGES += \
@@ -275,6 +268,10 @@ PRODUCT_PACKAGES += \
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
+
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
 
 # Media
 PRODUCT_PACKAGES += \
@@ -379,12 +376,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0.vendor:64 \
-    android.hardware.usb@1.1.vendor:64 \
-    android.hardware.usb@1.2.vendor:64 \
-    android.hardware.usb@1.3.vendor:64 \
-    android.hardware.usb.gadget@1.0.vendor:64 \
-    android.hardware.usb.gadget@1.1.vendor:64
+    android.hardware.usb@1.3-service-mediatekv2
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -394,7 +386,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libkeystore-wifi-hidl:64 \
     libkeystore-engine-wifi-hidl:64 \
-    android.hardware.wifi@1.0-service-lazy.viva \
+    android.hardware.wifi@1.0-service-lazy \
     wpa_supplicant \
     hostapd
 
@@ -432,7 +424,6 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.cgroup.rc \
-    init.connectivity.common.rc \
     init.connectivity.rc \
     init.modem.rc \
     init.nxpnfc.rc \
@@ -440,7 +431,6 @@ PRODUCT_PACKAGES += \
     init.mt6781.usb.rc \
     init.project.rc \
     init.sensor_1_0.rc \
-    init_connectivity.rc \
     ueventd.mt6781.rc
 
 # Seccomp
